@@ -30,8 +30,30 @@ public class InjectionExamplesApplication {
 		Catalog southFood = ctx.getBean(Catalog.class);
 		 
 		log.info(southFood.toString());
-		System.out.println(southFood.getItemList());
+
+		southFood.getItemList().stream().map(eachItem -> eachItem.getItemName()).forEach(System.out::println);
 		
+		
+		DiscountService service = ctx.getBean(DiscountService.class);
+		
+		DiscountNotification protoBean;
+		
+		protoBean = service.getDiscount("april");
+				
+				System.out.println(protoBean.hashCode());
+		
+		System.out.println(protoBean.showDiscount());
+		
+		
+		protoBean = service.getDiscount("may");
+		
+		System.out.println(protoBean.hashCode());
+
+        System.out.println(protoBean.showDiscount());
+
+		  
+		
+	//	https://www.baeldung.com/spring-injecting-collections
 		 
 	}
 
