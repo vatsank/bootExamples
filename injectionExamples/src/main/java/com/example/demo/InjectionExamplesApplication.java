@@ -3,7 +3,6 @@ package com.example.demo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.annotation.Configuration;
 
 import com.example.demo.domains.Catalog;
 import com.example.demo.domains.FoodItem;
@@ -40,21 +39,23 @@ public class InjectionExamplesApplication {
 		
 		protoBean = service.getDiscount("april");
 				
-				System.out.println(protoBean.hashCode());
+				log.info("Hash Code :="+protoBean.hashCode());
 		
-		System.out.println(protoBean.showDiscount());
+		log.info("Discount :="+protoBean.showDiscount());
 		
 		
 		protoBean = service.getDiscount("may");
 		
-		System.out.println(protoBean.hashCode());
+		log.info("Hash Code :="+protoBean.hashCode());
 
-        System.out.println(protoBean.showDiscount());
+		
+		log.info("Discount  :="+protoBean.showDiscount());
+
+       
 
 		  
 		
-	//	https://www.baeldung.com/spring-injecting-collections
-		 
+              ctx.close();		 
 	}
 
 }
