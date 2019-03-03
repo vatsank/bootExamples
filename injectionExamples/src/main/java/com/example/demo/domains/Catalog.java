@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import lombok.ToString;
 
 @Data

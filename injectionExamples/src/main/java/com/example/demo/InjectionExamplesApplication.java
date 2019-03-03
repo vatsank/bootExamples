@@ -6,6 +6,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 
 import com.example.demo.domains.Catalog;
 import com.example.demo.domains.FoodItem;
+import com.example.demo.domains.lombok.BookStore;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -52,8 +53,9 @@ public class InjectionExamplesApplication {
 		log.info("Discount  :="+protoBean.showDiscount());
 
        
-
-		  
+		  BookStore store = ctx.getBean(BookStore.class);
+				  
+				  store.printRating();
 		
               ctx.close();		 
 	}
