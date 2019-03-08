@@ -14,15 +14,15 @@ public class FindPartnerController {
 	@Autowired
 	private RestTemplate template;
 	
-	@Autowired
-	private EurekaDiscoveryClient clientRef;	
-	
+//	@Autowired
+//	private EurekaDiscoveryClient clientRef;	
+//	
 	@GetMapping("/getDrivers")
 	public String fetechPartner() {
 		
-		String baseURL = clientRef.getServices().get(0);
+	//	String baseURL = clientRef.getServices().get(0);
 		
-		System.out.println("==================="+baseURL);
+	//	System.out.println("==================="+baseURL);
 		
 	  String response = template.getForObject("http://partner-profile-service/getPartner/",String.class);
 
