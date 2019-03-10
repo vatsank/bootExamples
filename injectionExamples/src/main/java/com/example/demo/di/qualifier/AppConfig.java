@@ -6,6 +6,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
+import com.example.demo.domains.DeliveryExecutive;
+
 
 @Configuration
 @ComponentScan(basePackages="com.example.demo.di.qualifier")
@@ -39,4 +41,9 @@ public class AppConfig {
 		return new Bike("M5", "BMW", "blue");
 	}
 
+	@Bean(initMethod="init")
+	public DeliveryExecutive executive() {
+		
+		return new DeliveryExecutive();
+	}
 }

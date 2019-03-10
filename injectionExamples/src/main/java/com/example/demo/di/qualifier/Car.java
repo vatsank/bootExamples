@@ -10,7 +10,7 @@ import lombok.ToString;
 @Data
 @EqualsAndHashCode(callSuper=true)
 @ToString
-@Component
+
 public class Car extends Vehicle {
 	
 	private String engineType;
