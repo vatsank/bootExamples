@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 public class CustomAdvice {
 
 	
-    @Around("@annotation(LogExecutionTime)")
+    @Around("@annotation(com.example.demo.utils.LogExecutionTime)")
     public Object logExecutionTime(ProceedingJoinPoint joinPoint) throws Throwable {
     	
     	long start = System.currentTimeMillis();

@@ -29,6 +29,7 @@ public class InjectionExamplesApplication {
 		
 		Catalog southFood = ctx.getBean(Catalog.class);
 		 
+		System.out.println(southFood.getAddress());
 		log.info(southFood.toString());
 
 		southFood.getItemList().stream().map(eachItem -> eachItem.getItemName()).forEach(System.out::println);

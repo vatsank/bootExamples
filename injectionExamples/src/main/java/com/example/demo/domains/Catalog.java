@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.ToString;
@@ -20,7 +21,8 @@ public class Catalog {
 	private String catalogName;
 	private Address address;
 	
-	@Autowired(required=false)
+	
+	@Autowired
 	private List<FoodItem> itemList;
 
 	public Catalog(long code, String catalogName, Address address) {
